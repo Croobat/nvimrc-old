@@ -44,6 +44,7 @@ set autochdir                           " Your working directory will always be 
 set nohlsearch                          " Disable highlighting in search"
 set ignorecase                          " Case insensitive search"
 set foldmethod=marker                   " Marker fold method {{{}}}"
+set formatoptions-=cro                  " Disable auto comment in new line"
 
 """"""""""""""""""""""
 "  Color scheme mod  "
