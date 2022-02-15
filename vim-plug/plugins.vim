@@ -17,6 +17,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " File Explorer
     Plug 'scrooloose/NERDTree'
 
+    " Nerd commenter
+    Plug 'preservim/nerdcommenter'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
@@ -69,6 +72,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " sudo privileges neovim
     Plug 'lambdalisue/suda.vim'
+
+    " zen mode
+    Plug 'junegunn/goyo.vim'
 
     """
     call plug#end()

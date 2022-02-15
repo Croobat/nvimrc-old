@@ -1,6 +1,7 @@
 """"""""""""""""""""""
 "  Explorer settings "
 """"""""""""""""""""""
+
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \     'root-uri': '~/.vim',
