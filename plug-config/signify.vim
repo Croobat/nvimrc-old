@@ -8,6 +8,8 @@ let g:signify_sign_change            = '~'
 let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1
 
+" Less priority
+let g:signify_priority = 1
 
 " Jump though hunks
 nmap <leader>gj <plug>(signify-next-hunk)
