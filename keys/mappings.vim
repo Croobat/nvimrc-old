@@ -1,3 +1,7 @@
+""""""""""""""""""""""
+"  Custom mappings  "
+""""""""""""""""""""""
+
 nnoremap <space> <nop>
 
 " Disable Ex mode
@@ -77,9 +81,6 @@ nnoremap <enter> o<esc>
 nnoremap <A-enter> O<esc>
 " Word wrap
 nnoremap <A-z> :set wrap!<CR>
-
-" Snippets
-nnoremap !html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>6jwf>a
 
 " Faster scrolling
 nnoremap <c-j> 5j

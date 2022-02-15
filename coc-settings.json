@@ -10,6 +10,8 @@
     "UltiSnips",
     "~/.config/nvim/utils/snips"
   ],
+
+  // snippets
   "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
 
   // explorer

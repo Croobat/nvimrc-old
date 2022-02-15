@@ -1,3 +1,7 @@
+""""""""""""""""""""""
+"  General sets  "
+""""""""""""""""""""""
+
 " set leader key
 let g:mapleader = "\<Space>"
 
@@ -41,25 +45,10 @@ set nohlsearch                          " Disable highlighting in search"
 set ignorecase                          " Case insensitive search"
 set foldmethod=marker                   " Marker fold method {{{}}}"
 
-" let g:coc_start_at_startup = v:false
+""""""""""""""""""""""
+"  Color scheme mod  "
+""""""""""""""""""""""
 
-function! CocToggle()
-    if g:coc_enabled
-        CocDisable
-    else
-        CocEnable
-    endif
-endfunction
-command! CocToggle :call CocToggle()
-
-" You can't stop me
-cmap w!! w !sudo tee %
-command W SudaWrite
-
-" Tags file
-command! MakeTags !ctags -R .
-
-"Color scheme
 colorscheme dracula
 highlight LineNr guifg=#d8e17e
 highlight Comment guifg=#8696da
