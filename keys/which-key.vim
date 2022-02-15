@@ -10,7 +10,7 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
+set timeoutlen=100
 
 
 " Not a fan of floating windows for this
@@ -31,7 +31,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['E'] = [ ':CocCommand explorer --preset floating'       , 'float explorer' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['c'] = [ ':CocToggle'                     , 'Toggle Coc' ]
+let g:which_key_map['b'] = [ '<Plug>CodeRunner'                  , 'Run code' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':Marks'                     , 'split marks']
@@ -40,7 +40,7 @@ let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                       , 'zen' ]
 
-" s is for search
+" s is for search (FZF)
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'     , 'history'],
@@ -67,6 +67,35 @@ let g:which_key_map.s = {
       \ 'w' : [':Windows'      , 'search windows'],
       \ 'y' : [':Filetypes'    , 'file types'],
       \ 'z' : [':FZF'          , 'FZF'],
+      \ }
+
+" g is for hunks (signify)
+let g:which_key_map.g = {
+      \ 'name' : '+hunk' ,
+      \ 'J' : ['99<plug>(signify-next-hunk)'      , 'Last hunk' ],
+      \ 'K' : ['99<plug>(signify-prev-hunk)'      , 'First hunk'],
+      \ 'j' : ['<plug>(signify-next-hunk)'        , 'Next hunk' ],
+      \ 'k' : ['<plug>(signify-prev-hunk)'        , 'Prev hunk' ],
+      \ }
+
+" c is for Conqueror of completion (Coc)
+let g:which_key_map.c = {
+      \ 'name' : '+Coc' ,
+      \ 'a'  : ['<Plug>(coc-codeaction-selected)'      , 'Codeaction selection'],
+      \ 'ac' : ['<Plug>(coc-codeaction)'      , 'Codeaction buffer'],
+      \ 'c'  : [':<C-u>CocList commands<cr>'      , 'Show commands'],
+      \ 'cl' : ['<Plug>(coc-codelens-action)'      , 'Code lens current line'],
+      \ 'd'  : [':<C-u>CocList diagnostics<cr>'      , 'Show all diagnostics'],
+      \ 'e'  : [':<C-u>CocList extensions<cr>'      , 'Manage extensions'],
+      \ 'fo' : ['<Plug>(coc-format-selected)'      , 'Format selection'],
+      \ 'j'  : [':<C-u>CocNext<CR>'      , 'Default action next item'],
+      \ 'k'  : [':<C-u>CocPrev<CR>'      , 'Default action prev item'],
+      \ 'o'  : [':<C-u>CocList outline<cr>'      , 'Search symbol in doc'],
+      \ 'p'  : [':<C-u>CocListResume<CR>'      , 'Resum latest coc list'],
+      \ 'qf' : ['<Plug>(coc-fix-current)'      , 'Autofix current line'],
+      \ 'rn' : ['<Plug>(coc-rename)'      , 'Symbol renaming'],
+      \ 's'  : [':<C-u>CocList -I symbols<cr>'      , 'Search workspace symbols'],
+      \ 't'  :  [':CocToggle'      , 'Toggle Coc'],
       \ }
 
 " Register which key map

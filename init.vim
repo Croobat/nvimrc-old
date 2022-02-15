@@ -2,6 +2,7 @@
 "  Init vim config  "
 """"""""""""""""""""""
 
+
 " Source plugins
 source $HOME/.config/nvim/vim-plug/plugins.vim
 
@@ -26,6 +27,7 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
+source $HOME/.config/nvim/plug-config/coderunner.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " Themes

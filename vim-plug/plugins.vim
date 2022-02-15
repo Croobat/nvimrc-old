@@ -80,6 +80,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " zen mode
     Plug 'junegunn/goyo.vim'
 
+    " code runner
+    Plug 'xianzhon/vim-code-runner'
+
     """
     call plug#end()
 
