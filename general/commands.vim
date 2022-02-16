@@ -1,7 +1,6 @@
 """"""""""""""""""""""
-"  Custom commands  "
+"     Functions      "
 """"""""""""""""""""""
-
 function! CocToggle()
     if g:coc_enabled
         CocDisable
@@ -9,6 +8,10 @@ function! CocToggle()
         CocEnable
     endif
 endfunction
+
+""""""""""""""""""""""
+"  Custom commands  "
+""""""""""""""""""""""
 command! CocToggle :call CocToggle()
 
 " You can't stop me
@@ -17,3 +20,6 @@ command W SudaWrite
 
 " Tags file
 command! MakeTags !ctags -R .
+
+" Yank path
+command Path redir @+ | echo Relpath(expand("%"))

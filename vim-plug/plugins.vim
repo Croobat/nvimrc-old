@@ -31,6 +31,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " code runner
     Plug 'xianzhon/vim-code-runner'
 
+    " Realtime coding
+    Plug 'metakirby5/codi.vim'
 
     """"""""""""""""""""""
     "    Syntax/typing   "
@@ -50,6 +52,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Surround with ({""})
     Plug 'tpope/vim-surround'
 
+    " Prettier post install (yarn install | npm install) then load plugin only for editing supported files
+    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
     """"""""""""""""""""""
     "     Navigation     "

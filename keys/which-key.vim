@@ -27,18 +27,19 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
+let g:which_key_map[';'] = [ '$a;'  , 'Quick semicolon' ]
 let g:which_key_map['E'] = [ ':CocCommand explorer --preset floating'       , 'float explorer' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['b'] = [ '<Plug>CodeRunner'                  , 'Run code' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':Marks'                     , 'split marks']
+let g:which_key_map['p'] = [ '<Plug>(Prettier)'                     , 'Prettier']
 let g:which_key_map['q'] = [ ':Sayonara'                     , 'close buffer']
 let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['z'] = [ ':Goyo'                       , 'zen' ]
 
-" s is for search (FZF)
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'     , 'history'],
@@ -106,5 +107,4 @@ let g:which_key_map.f = {
       \ }
 
 " Register which key map
-"
 call which_key#register('<Space>', "g:which_key_map")
