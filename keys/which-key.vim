@@ -28,9 +28,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map[';'] = [ '$a;'  , 'Quick semicolon' ]
+let g:which_key_map['D'] = [ ':Codi!'       , 'Disable codi' ]
 let g:which_key_map['E'] = [ ':CocCommand explorer --preset floating'       , 'float explorer' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['b'] = [ '<Plug>CodeRunner'                  , 'Run code' ]
+let g:which_key_map['d'] = [ ':Codi'       , 'Enable codi' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['m'] = [ ':Marks'                     , 'split marks']
