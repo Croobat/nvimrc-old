@@ -62,7 +62,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "     Navigation     "
     """"""""""""""""""""""
     " More target operators
-    Plug 'wellle/targets.vim'
+    " Plug 'wellle/targets.vim'
+    Plug 'wellle/targets.vim', {'on' : []}
+    augroup LoadDuringHold_Targets
+        autocmd!
+        autocmd CursorHold,CursorHoldI * call plug#load('targets.vim') | autocmd! LoadDuringHold_Targets
+    augroup end
 
     " Visible marks
     Plug 'kshenoy/vim-signature'
@@ -79,8 +84,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     """"""""""""""""""""""
     "   File navigation  "
     """"""""""""""""""""""
-     " File Explorer
-    Plug 'scrooloose/NERDTree'
+    " File Explorer
+    " Plug 'scrooloose/NERDTree'
 
     " Ranger FM
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
@@ -117,8 +122,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "   Aesthetics/QOL   "
     """"""""""""""""""""""
     " Status bar
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+     "Plug 'vim-airline/vim-airline'
+     "Plug 'vim-airline/vim-airline-themes'
+    Plug 'nvim-lualine/lualine.nvim'
+    " If you want to have icons in your statusline choose one of these
+    Plug 'kyazdani42/nvim-web-devicons'
 
     " Colors
     Plug 'norcalli/nvim-colorizer.lua'
@@ -136,8 +144,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Show indent lines
     Plug 'Yggdroot/indentLine'
 
-    " Dot repeat action for some plugins
+    " Add repeat dot with some plugins
     Plug 'tpope/vim-repeat'
+
+    " Startup TB
+    Plug 'tweekmonster/startuptime.vim'
 
     """
     call plug#end()

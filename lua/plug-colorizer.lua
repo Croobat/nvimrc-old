@@ -5,7 +5,7 @@
 require'colorizer'.setup(
   {'*';},
   {
-    RGB      = true;         -- #RGB hex codes
+      RGB      = true;         -- #RGB hex codes
 	  RRGGBB   = true;         -- #RRGGBB hex codes
 	  names    = true;         -- s"Name" codes like Blue
 	  RRGGBBAA = true;         -- #RRGGBBAA hex codes
