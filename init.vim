@@ -28,6 +28,7 @@ source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/coderunner.vim
 source $HOME/.config/nvim/plug-config/easymotion.vim
+source $HOME/.config/nvim/plug-config/arduino.vim
 source $HOME/.config/nvim/plug-config/codi.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 

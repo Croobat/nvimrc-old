@@ -1,5 +1,5 @@
 """"""""""""""""""""""
-"  Map leader  "
+"     Map leader     "
 """"""""""""""""""""""
 
 " Map leader to which_key
@@ -107,6 +107,16 @@ let g:which_key_map.f = {
       \ 'l' : ['<Plug>(easymotion-bd-jk)'        , 'find line' ],
       \ 'w' : ['<Plug>(easymotion-bd-w)'        , 'find word' ],
       \ }
+
+let g:which_key_map.a = {
+      \ 'name' : '+arduino' ,
+      \ 'a' : [':ArduinoVerify'      , 'Build sketch' ],
+      \ 'b' : [':ArduinoUpload'      , 'Build and upload'],
+      \ 'd' : [':ArduinoUploadAndSerial'        , 'Build, upload and debug' ],
+      \ 'q' : [':ArduinoChooseBoard'        , 'Choose board' ],
+      \ 'p' : [':ArduinoChooseProgrammer'        , 'Choose programmer' ],
+      \ }
+
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

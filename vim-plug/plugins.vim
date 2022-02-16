@@ -34,6 +34,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Realtime coding
     Plug 'metakirby5/codi.vim'
 
+    " Arduino
+    Plug 'stevearc/vim-arduino'
+
     """"""""""""""""""""""
     "    Syntax/typing   "
     """"""""""""""""""""""
