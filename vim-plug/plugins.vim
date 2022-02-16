@@ -129,6 +129,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Show indent lines
     Plug 'Yggdroot/indentLine'
 
+    " Dot repeat action for some plugins
+    Plug 'tpope/vim-repeat'
+
     """
     call plug#end()
 
