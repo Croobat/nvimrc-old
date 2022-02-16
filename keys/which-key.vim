@@ -96,5 +96,15 @@ let g:which_key_map.c = {
       \ 't'  :  [':CocToggle'      , 'Toggle Coc'],
       \ }
 
+" space is for better navigation (easymotion)
+let g:which_key_map.f = {
+      \ 'name' : '+easymotion' ,
+      \ 'f' : ['<Plug>(easymotion-bd-f)'      , 'find 1 char' ],
+      \ 's' : ['<Plug>(easymotion-overwin-f2)'      , 'find 2 char'],
+      \ 'l' : ['<Plug>(easymotion-bd-jk)'        , 'find line' ],
+      \ 'w' : ['<Plug>(easymotion-bd-w)'        , 'find word' ],
+      \ }
+
 " Register which key map
+"
 call which_key#register('<Space>', "g:which_key_map")

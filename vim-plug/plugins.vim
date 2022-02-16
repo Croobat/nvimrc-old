@@ -66,6 +66,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better t and f
     Plug 'unblevable/quick-scope'
 
+    " Focus (like qutebrowser)
+    Plug 'easymotion/vim-easymotion'
 
     """"""""""""""""""""""
     "   File navigation  "
@@ -124,6 +126,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " neovim sudo privileges (:Sudawrite :Sudaread)
     Plug 'lambdalisue/suda.vim'
 
+    " Show indent lines
+    Plug 'Yggdroot/indentLine'
 
     """
     call plug#end()

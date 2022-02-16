@@ -27,6 +27,7 @@ source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 source $HOME/.config/nvim/plug-config/coderunner.vim
+source $HOME/.config/nvim/plug-config/easymotion.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " Themes
