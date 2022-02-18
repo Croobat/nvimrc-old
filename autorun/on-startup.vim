@@ -6,4 +6,5 @@
 autocmd BufEnter * ColorizerAttachToBuffer
 
 " Rainbow nested ((()))
-autocmd BufEnter * RainbowParentheses
+"autocmd BufEnter * RainbowParentheses
+"autocmd BufEnter * RainbowToggle

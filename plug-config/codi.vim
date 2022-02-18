@@ -1,5 +1,5 @@
 " Change the color
-highlight CodiVirtualText guifg=#568c64
+highlight CodiVirtualText guifg=#66a676
 
 let g:codi#virtual_text_prefix = "→ "
 

@@ -26,8 +26,9 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
+let g:which_key_map[' '] = [ 'i\<Space>\<Esc>l'                 , 'add space'       ]
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'                 , 'comment line'       ]
-let g:which_key_map[';'] = [ '$a;'                                       , 'Quick semicolon'    ]
+let g:which_key_map[';'] = [ '$a;\<Esc>'                                       , 'Quick semicolon'    ]
 let g:which_key_map['D'] = [ ':Codi!'                                    , 'Disable codi'       ]
 let g:which_key_map['E'] = [ ':CocCommand explorer --preset floating'    , 'float explorer'     ]
 "let g:which_key_map['S'] = [ ':Startify'                                 , 'start screen'       ]
@@ -36,7 +37,7 @@ let g:which_key_map['d'] = [ ':Codi'                                     , 'Enab
 let g:which_key_map['e'] = [ ':CocCommand explorer'                      , 'explorer'           ]
 let g:which_key_map['h'] = [ '<C-W>s'                                    , 'split below'        ]
 let g:which_key_map['m'] = [ ':Marks'                                    , 'split marks'        ]
-let g:which_key_map['p'] = [ '<Plug>(Prettier)'                          , 'Prettier']
+"let g:which_key_map['p'] = [ '<Plug>(Prettier)'                          , 'Prettier']
 let g:which_key_map['q'] = [ ':Sayonara'                                 , 'close buffer'       ]
 "let g:which_key_map['r'] = [ ':Ranger'                                   , 'ranger'             ]
 let g:which_key_map['s'] = [ '<Plug>SortMotion'                          , 'Sort'               ]
@@ -87,23 +88,23 @@ let g:which_key_map.k = {
       \ 'name' : '+Coc' ,
       \ 'a'  : ['<Plug>(coc-codeaction-selected)'     , 'Codeaction selection'    ],
       \ 'ac' : ['<Plug>(coc-codeaction)'              , 'Codeaction buffer'       ],
-      \ 'c'  : [':<C-u>CocList commands<cr>'          , 'Show commands'           ],
+      \ 'c'  : [':CocList commands'                   , 'Show commands'           ],
       \ 'cl' : ['<Plug>(coc-codelens-action)'         , 'Code lens current line'  ],
-      \ 'd'  : [':<C-u>CocList diagnostics<cr>'       , 'Show all diagnostics'    ],
-      \ 'e'  : [':<C-u>CocList extensions<cr>'        , 'Manage extensions'       ],
+      \ 'd'  : [':CocList diagnostics'                , 'Show all diagnostics'    ],
+      \ 'e'  : [':CocList extensions'                 , 'Manage extensions'       ],
       \ 'fo' : ['<Plug>(coc-format-selected)'         , 'Format selection'        ],
-      \ 'j'  : [':<C-u>CocNext<CR>'                   , 'Default action next item'],
-      \ 'k'  : [':<C-u>CocPrev<CR>'                   , 'Default action prev item'],
-      \ 'o'  : [':<C-u>CocList outline<cr>'           , 'Search symbol in doc'    ],
-      \ 'p'  : [':<C-u>CocListResume<CR>'             , 'Resum latest coc list'   ],
+      \ 'j'  : [':CocNext'                            , 'Default action next item'],
+      \ 'k'  : [':CocPrev'                            , 'Default action prev item'],
+      \ 'o'  : [':CocList outline'                    , 'Search symbol in doc'    ],
+      \ 'p'  : [':CocListResume'                      , 'Resume latest coc list'  ],
       \ 'qf' : ['<Plug>(coc-fix-current)'             , 'Autofix current line'    ],
       \ 'rn' : ['<Plug>(coc-rename)'                  , 'Symbol renaming'         ],
-      \ 's'  : [':<C-u>CocList -I symbols<cr>'        , 'Search workspace symbols'],
+      \ 's'  : [':CocList -I symbols'                 , 'Search workspace symbols'],
       \ 't'  :  [':CocToggle'                         , 'Toggle Coc'              ],
       \ }
 
 " space is for better navigation (easymotion)
-let g:which_key_map.f = {
+let g:which_key_map.s = {
       \ 'name' : '+easymotion' ,
       \ 'f' : ['<Plug>(easymotion-bd-f)'            , 'find 1 char' ],
       \ 's' : ['<Plug>(easymotion-overwin-f2)'      , 'find 2 char' ],

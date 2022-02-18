@@ -25,8 +25,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Conqueror of completion (stable)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Coc snippets
+    " Snippets
     Plug 'honza/vim-snippets'
+    Plug 'SirVer/ultisnips'
 
     " code runner
     Plug 'xianzhon/vim-code-runner'
@@ -57,7 +58,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-surround'
 
     " Prettier post install (yarn install | npm install) then load plugin only for editing supported files
-    Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+    " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
     " Replace with register (griw)
     Plug 'vim-scripts/ReplaceWithRegister'
@@ -90,7 +91,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'unblevable/quick-scope'
 
     " Focus (like qutebrowser)
-    Plug 'easymotion/vim-easymotion'
+    " Plug 'easymotion/vim-easymotion'
 
     """"""""""""""""""""""
     "   File navigation  "
@@ -105,7 +106,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 
     " Startify (project manager vim)
-    Plug 'mhinz/vim-startify'
+    " Plug 'mhinz/vim-startify'
 
     " Fuzzy finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -120,13 +121,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-signify'
 
     " Git commands from vim (:Git)
-    Plug 'tpope/vim-fugitive'
+    " Plug 'tpope/vim-fugitive'
 
     " Hub commands (:GBrowse :GRemove)
-    Plug 'tpope/vim-rhubarb'
+    " Plug 'tpope/vim-rhubarb'
 
     " Browse commits (:GV! :GV? :GV)
-    Plug 'junegunn/gv.vim'
+    " Plug 'junegunn/gv.vim'
 
 
     """"""""""""""""""""""
@@ -145,7 +146,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kana/vim-textobj-line'
 
     " Ruby block (ends with end)
-    Plug 'nelstrom/vim-textobj-rubyblock'
+    " Plug 'nelstrom/vim-textobj-rubyblock'
 
 
     """"""""""""""""""""""
@@ -160,7 +161,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Colors
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'junegunn/rainbow_parentheses.vim'
+    Plug 'frazrepo/vim-rainbow'
+    " Plug 'junegunn/rainbow_parentheses.vim'
 
     " zen mode
     Plug 'junegunn/goyo.vim'

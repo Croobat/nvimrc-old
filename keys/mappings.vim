@@ -20,6 +20,12 @@ nnoremap <M-L>    :vertical resize -2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 
+" Netter insert navigation
+inoremap <M-l> <Esc>la
+inoremap <M-h> <Esc>ha
+inoremap <M-j> <Esc>ja
+inoremap <M-k> <Esc>ka
+
 " Fix multiline segments
 nnoremap j gj
 nnoremap k gk
@@ -64,3 +70,6 @@ xnoremap <c-k> 5k
 
 " Better pasting
 nnoremap <c-p> pg;h
+
+" Code runner (visual)
+" vmap <leader>b <plug>CodeRunner
