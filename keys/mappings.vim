@@ -20,10 +20,10 @@ nnoremap <M-L>    :vertical resize -2<CR>
 " I hate escape more than anything else
 inoremap jk <Esc>
 
-" Netter insert navigation
+" Better insert navigation
 inoremap <M-l> <Esc>la
 inoremap <M-h> <Esc>ha
-inoremap <M-j> <Esc>ja
+inoremap <M-k> <Esc>ja
 inoremap <M-k> <Esc>ka
 
 " Fix multiline segments
@@ -31,9 +31,9 @@ nnoremap j gj
 nnoremap k gk
 
 " TAB in general mode will move to text buffer
-nnoremap <TAB> :bnext<CR>
+nnoremap <TAB> :bnext<CR><CR>
 " SHIFT-TAB will go back
-nnoremap <S-TAB> :bprevious<CR>
+nnoremap <S-TAB> :bprevious<CR><CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
@@ -45,10 +45,10 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Better window navigation
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <M-j> <C-w>h
+nnoremap <M-h> <C-w>j
+nnoremap <M-l> <C-w>k
+nnoremap <M-k> <C-w>l
 
 " Folding
 nnoremap , za

@@ -35,6 +35,8 @@ let g:which_key_map['b'] = [ '<Plug>CodeRunner'                          , 'Run 
 let g:which_key_map['d'] = [ ':Codi'                                     , 'Enable codi'        ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'                      , 'explorer'           ]
 let g:which_key_map['h'] = [ '<C-W>s'                                    , 'split below'        ]
+let g:which_key_map['l'] = [ ':Bracey'                                    , 'live server'        ]
+let g:which_key_map['L'] = [ ':BraceyReload'                                    , 'reload live server'        ]
 let g:which_key_map['m'] = [ ':Marks'                                    , 'split marks'        ]
 let g:which_key_map['q'] = [ ':Sayonara'                                 , 'close buffer'       ]
 let g:which_key_map['s'] = [ '<Plug>SortMotion'                          , 'Sort'               ]
@@ -80,25 +82,25 @@ let g:which_key_map.h = {
       \ 'k' : ['<plug>(signify-prev-hunk)'        , 'Prev hunk' ],
       \ }
 
-" " c is for Conqueror of completion (Coc)
-" let g:which_key_map.k = {
-"       \ 'name' : '+Coc' ,
-"       \ 'a'  : ['<Plug>(coc-codeaction-selected)'     , 'Codeaction selection'    ],
-"       \ 'ac' : ['<Plug>(coc-codeaction)'              , 'Codeaction buffer'       ],
-"       \ 'c'  : [':CocList commands'                   , 'Show commands'           ],
-"       \ 'cl' : ['<Plug>(coc-codelens-action)'         , 'Code lens current line'  ],
-"       \ 'd'  : [':CocList diagnostics'                , 'Show all diagnostics'    ],
-"       \ 'e'  : [':CocList extensions'                 , 'Manage extensions'       ],
-"       \ 'fo' : ['<Plug>(coc-format-selected)'         , 'Format selection'        ],
-"       \ 'j'  : [':CocNext'                            , 'Default action next item'],
-"       \ 'k'  : [':CocPrev'                            , 'Default action prev item'],
-"       \ 'o'  : [':CocList outline'                    , 'Search symbol in doc'    ],
-"       \ 'p'  : [':CocListResume'                      , 'Resume latest coc list'  ],
-"       \ 'qf' : ['<Plug>(coc-fix-current)'             , 'Autofix current line'    ],
-"       \ 'rn' : ['<Plug>(coc-rename)'                  , 'Symbol renaming'         ],
-"       \ 's'  : [':CocList -I symbols'                 , 'Search workspace symbols'],
-"       \ 't'  :  [':CocToggle'                         , 'Toggle Coc'              ],
-"       \ }
+" c is for Conqueror of completion (Coc)
+let g:which_key_map.k = {
+      \ 'name' : '+Coc' ,
+      \ 'a'  : ['<Plug>(coc-codeaction-selected)'     , 'Codeaction selection'    ],
+      \ 'ac' : ['<Plug>(coc-codeaction)'              , 'Codeaction buffer'       ],
+      \ 'c'  : [':CocList commands'                   , 'Show commands'           ],
+      \ 'cl' : ['<Plug>(coc-codelens-action)'         , 'Code lens current line'  ],
+      \ 'd'  : [':CocList diagnostics'                , 'Show all diagnostics'    ],
+      \ 'e'  : [':CocList extensions'                 , 'Manage extensions'       ],
+      \ 'fo' : ['<Plug>(coc-format-selected)'         , 'Format selection'        ],
+      \ 'j'  : [':CocNext'                            , 'Default action next item'],
+      \ 'k'  : [':CocPrev'                            , 'Default action prev item'],
+      \ 'o'  : [':CocList outline'                    , 'Search symbol in doc'    ],
+      \ 'p'  : [':CocListResume'                      , 'Resume latest coc list'  ],
+      \ 'qf' : ['<Plug>(coc-fix-current)'             , 'Autofix current line'    ],
+      \ 'rn' : ['<Plug>(coc-rename)'                  , 'Symbol renaming'         ],
+      \ 's'  : [':CocList -I symbols'                 , 'Search workspace symbols'],
+      \ 't'  :  [':CocToggle'                         , 'Toggle Coc'              ],
+      \ }
 
 " " space is for better navigation (easymotion)
 " let g:which_key_map.s = {

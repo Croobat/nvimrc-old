@@ -22,3 +22,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+autocmd ColorScheme *
+      \ hi CocUnusedHighlight ctermbg=NONE guibg=NONE guifg=#909090
