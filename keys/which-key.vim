@@ -27,26 +27,23 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map[' '] = [ 'i\<Space>\<Esc>l'                 , 'add space'       ]
-let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'                 , 'comment line'       ]
+let g:which_key_map['/'] = [ 'gcc\<Esc>'                 , 'comment line'       ]
 let g:which_key_map[';'] = [ '$a;\<Esc>'                                       , 'Quick semicolon'    ]
 let g:which_key_map['D'] = [ ':Codi!'                                    , 'Disable codi'       ]
 let g:which_key_map['E'] = [ ':CocCommand explorer --preset floating'    , 'float explorer'     ]
-"let g:which_key_map['S'] = [ ':Startify'                                 , 'start screen'       ]
 let g:which_key_map['b'] = [ '<Plug>CodeRunner'                          , 'Run code'           ]
 let g:which_key_map['d'] = [ ':Codi'                                     , 'Enable codi'        ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'                      , 'explorer'           ]
 let g:which_key_map['h'] = [ '<C-W>s'                                    , 'split below'        ]
 let g:which_key_map['m'] = [ ':Marks'                                    , 'split marks'        ]
-"let g:which_key_map['p'] = [ '<Plug>(Prettier)'                          , 'Prettier']
 let g:which_key_map['q'] = [ ':Sayonara'                                 , 'close buffer'       ]
-"let g:which_key_map['r'] = [ ':Ranger'                                   , 'ranger'             ]
 let g:which_key_map['s'] = [ '<Plug>SortMotion'                          , 'Sort'               ]
 let g:which_key_map['T'] = [ 'gzap'                                      , 'Title c. paragraph' ]
 let g:which_key_map['t'] = [ 'gz'                                        , 'Title case'         ]
 let g:which_key_map['v'] = [ '<C-W>v'                                    , 'split right'        ]
 let g:which_key_map['z'] = [ ':Goyo'                                     , 'zen'                ]
 
-let g:which_key_map.f = {
+let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'     , 'history'              ],
       \ ';' : [':Commands'     , 'commands'             ],
@@ -75,7 +72,7 @@ let g:which_key_map.f = {
       \ }
 
 " g is for hunks (signify)
-let g:which_key_map.g = {
+let g:which_key_map.h = {
       \ 'name' : '+hunk' ,
       \ 'J' : ['99<plug>(signify-next-hunk)'      , 'Last hunk' ],
       \ 'K' : ['99<plug>(signify-prev-hunk)'      , 'First hunk'],
@@ -83,34 +80,34 @@ let g:which_key_map.g = {
       \ 'k' : ['<plug>(signify-prev-hunk)'        , 'Prev hunk' ],
       \ }
 
-" c is for Conqueror of completion (Coc)
-let g:which_key_map.k = {
-      \ 'name' : '+Coc' ,
-      \ 'a'  : ['<Plug>(coc-codeaction-selected)'     , 'Codeaction selection'    ],
-      \ 'ac' : ['<Plug>(coc-codeaction)'              , 'Codeaction buffer'       ],
-      \ 'c'  : [':CocList commands'                   , 'Show commands'           ],
-      \ 'cl' : ['<Plug>(coc-codelens-action)'         , 'Code lens current line'  ],
-      \ 'd'  : [':CocList diagnostics'                , 'Show all diagnostics'    ],
-      \ 'e'  : [':CocList extensions'                 , 'Manage extensions'       ],
-      \ 'fo' : ['<Plug>(coc-format-selected)'         , 'Format selection'        ],
-      \ 'j'  : [':CocNext'                            , 'Default action next item'],
-      \ 'k'  : [':CocPrev'                            , 'Default action prev item'],
-      \ 'o'  : [':CocList outline'                    , 'Search symbol in doc'    ],
-      \ 'p'  : [':CocListResume'                      , 'Resume latest coc list'  ],
-      \ 'qf' : ['<Plug>(coc-fix-current)'             , 'Autofix current line'    ],
-      \ 'rn' : ['<Plug>(coc-rename)'                  , 'Symbol renaming'         ],
-      \ 's'  : [':CocList -I symbols'                 , 'Search workspace symbols'],
-      \ 't'  :  [':CocToggle'                         , 'Toggle Coc'              ],
-      \ }
+" " c is for Conqueror of completion (Coc)
+" let g:which_key_map.k = {
+"       \ 'name' : '+Coc' ,
+"       \ 'a'  : ['<Plug>(coc-codeaction-selected)'     , 'Codeaction selection'    ],
+"       \ 'ac' : ['<Plug>(coc-codeaction)'              , 'Codeaction buffer'       ],
+"       \ 'c'  : [':CocList commands'                   , 'Show commands'           ],
+"       \ 'cl' : ['<Plug>(coc-codelens-action)'         , 'Code lens current line'  ],
+"       \ 'd'  : [':CocList diagnostics'                , 'Show all diagnostics'    ],
+"       \ 'e'  : [':CocList extensions'                 , 'Manage extensions'       ],
+"       \ 'fo' : ['<Plug>(coc-format-selected)'         , 'Format selection'        ],
+"       \ 'j'  : [':CocNext'                            , 'Default action next item'],
+"       \ 'k'  : [':CocPrev'                            , 'Default action prev item'],
+"       \ 'o'  : [':CocList outline'                    , 'Search symbol in doc'    ],
+"       \ 'p'  : [':CocListResume'                      , 'Resume latest coc list'  ],
+"       \ 'qf' : ['<Plug>(coc-fix-current)'             , 'Autofix current line'    ],
+"       \ 'rn' : ['<Plug>(coc-rename)'                  , 'Symbol renaming'         ],
+"       \ 's'  : [':CocList -I symbols'                 , 'Search workspace symbols'],
+"       \ 't'  :  [':CocToggle'                         , 'Toggle Coc'              ],
+"       \ }
 
-" space is for better navigation (easymotion)
-let g:which_key_map.s = {
-      \ 'name' : '+easymotion' ,
-      \ 'f' : ['<Plug>(easymotion-bd-f)'            , 'find 1 char' ],
-      \ 's' : ['<Plug>(easymotion-overwin-f2)'      , 'find 2 char' ],
-      \ 'l' : ['<Plug>(easymotion-bd-jk)'           , 'find line'   ],
-      \ 'w' : ['<Plug>(easymotion-bd-w)'            , 'find word'   ],
-      \ }
+" " space is for better navigation (easymotion)
+" let g:which_key_map.s = {
+"       \ 'name' : '+easymotion' ,
+"       \ 'f' : ['<Plug>(easymotion-bd-f)'            , 'find 1 char' ],
+"       \ 's' : ['<Plug>(easymotion-overwin-f2)'      , 'find 2 char' ],
+"       \ 'l' : ['<Plug>(easymotion-bd-jk)'           , 'find line'   ],
+"       \ 'w' : ['<Plug>(easymotion-bd-w)'            , 'find word'   ],
+"       \ }
 
 let g:which_key_map.a = {
       \ 'name' : '+arduino' ,
@@ -121,24 +118,24 @@ let g:which_key_map.a = {
       \ 'p' : [':ArduinoChooseProgrammer'   , 'Choose programmer'       ],
       \ }
 
-let g:which_key_map.c = {
-      \ 'name' : '+comment' ,
-      \ '/' : ['<Plug>NERDCommenterToggle'     , 'Line'             ],
-      \ 'm' : ['<Plug>NERDCommenterMinimal'    , 'Minimal'          ],
-      \ 'i' : ['<Plug>NERDCommenterInvert'     , 'Invert'           ],
-      \ 's' : ['<Plug>NERDCommenterSexy'       , 'Sexy'             ],
-      \ 'y' : ['<Plug>NERDCommenterYank'       , 'Yank and comment' ],
-      \ '$' : ['<Plug>NERDCommenterToEOL'      , 'EOL'              ],
-      \ 'A' : ['<Plug>NERDCommenterAppend'     , 'Append'           ],
-      \ 'I' : ['<Plug>NERDCommenterInsert'     , 'Insert'           ],
-      \ 'c' : ['<Plug>NERDCommenterComment'    , 'Comment'          ],
-      \ 'n' : ['<Plug>NERDCommenterNested'     , 'Nesting'          ],
-      \ 'a' : ['<Plug>NERDCommenterAltDelims'  , 'Alt delimiters'   ],
-      \ 'l' : ['<Plug>NERDCommenterAlignLeft'  , 'Align left'       ],
-      \ 'b' : ['<Plug>NERDCommenterAlignBoth'  , 'Align both'       ],
-      \ 'u' : ['<Plug>NERDCommenterUncomment'  , 'Uncomment'        ],
-      \ 'p' : ["gcap"        , 'Paragraph'                          ],
-      \ }
+" let g:which_key_map.c = {
+"       \ 'name' : '+comment' ,
+"       \ '/' : ['<Plug>NERDCommenterToggle'     , 'Line'             ],
+"       \ 'm' : ['<Plug>NERDCommenterMinimal'    , 'Minimal'          ],
+"       \ 'i' : ['<Plug>NERDCommenterInvert'     , 'Invert'           ],
+"       \ 's' : ['<Plug>NERDCommenterSexy'       , 'Sexy'             ],
+"       \ 'y' : ['<Plug>NERDCommenterYank'       , 'Yank and comment' ],
+"       \ '$' : ['<Plug>NERDCommenterToEOL'      , 'EOL'              ],
+"       \ 'A' : ['<Plug>NERDCommenterAppend'     , 'Append'           ],
+"       \ 'I' : ['<Plug>NERDCommenterInsert'     , 'Insert'           ],
+"       \ 'c' : ['<Plug>NERDCommenterComment'    , 'Comment'          ],
+"       \ 'n' : ['<Plug>NERDCommenterNested'     , 'Nesting'          ],
+"       \ 'a' : ['<Plug>NERDCommenterAltDelims'  , 'Alt delimiters'   ],
+"       \ 'l' : ['<Plug>NERDCommenterAlignLeft'  , 'Align left'       ],
+"       \ 'b' : ['<Plug>NERDCommenterAlignBoth'  , 'Align both'       ],
+"       \ 'u' : ['<Plug>NERDCommenterUncomment'  , 'Uncomment'        ],
+"       \ 'p' : ["gcap"        , 'Paragraph'                          ],
+"       \ }
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

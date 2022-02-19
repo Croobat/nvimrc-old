@@ -1,4 +1,7 @@
 lua << END
+require('lualine').get_config()
+require('lualine').setup()
+
 require('lualine').setup {
   options = {
     icons_enabled = true,

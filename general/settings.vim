@@ -52,6 +52,10 @@ set shm+=I                              " Start screen"
 " Disable auto comment in new line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" ========== Statusline ==============
+" set laststatus=2
+" set statusline=%m\ %F\ %y\ %{&fileencoding?&fileencoding:&encoding}\ %=%(C:%c\ L:%l\ %P%)
+
 """"""""""""""""""""""
 "  Color scheme mod  "
 """"""""""""""""""""""

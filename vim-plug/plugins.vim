@@ -12,175 +12,158 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    """"""""""""""""""""""
-    "       theme        "
-    """"""""""""""""""""""
-    " Dracula theme
+    """""""""""""""""""""""
+    ""       theme        "
+    """""""""""""""""""""""
+    "" Dracula theme
     Plug 'Mofiqul/dracula.nvim'
 
 
-    """"""""""""""""""""""
-    "    Programming     "
-    """"""""""""""""""""""
-    " Conqueror of completion (stable)
+    """""""""""""""""""""""
+    ""    Programming     "
+    """""""""""""""""""""""
+    "" Conqueror of completion (stable)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Snippets
+    "" Snippets
     Plug 'honza/vim-snippets'
-    Plug 'SirVer/ultisnips'
+    "Plug 'SirVer/ultisnips'
 
-    " code runner
+    "" code runner
     Plug 'xianzhon/vim-code-runner'
 
-    " Realtime coding
+    "" Realtime coding
     Plug 'metakirby5/codi.vim'
 
-    " Arduino
+    "" Arduino
     Plug 'stevearc/vim-arduino'
 
-    """"""""""""""""""""""
-    "    Syntax/typing   "
-    """"""""""""""""""""""
-    " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
+    "" Real time pages
+    Plug 'turbio/bracey.vim'
 
-    " Nerd commenter
-    Plug 'preservim/nerdcommenter'
+    """""""""""""""""""""""
+    ""    Syntax/typing   "
+    """""""""""""""""""""""
+    "" Nerd commenter
     Plug 'tpope/vim-commentary'
 
-    " Auto pairs for '(' '[' '{'
+    "" Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
-    " Auto close tags (press >)
+    "" Auto close tags (press >)
     Plug 'alvan/vim-closetag'
 
-    " Surround with ({""})
+    "" Surround with ({""})
     Plug 'tpope/vim-surround'
 
-    " Prettier post install (yarn install | npm install) then load plugin only for editing supported files
-    " Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-
-    " Replace with register (griw)
+    "" Replace with register (griw)
     Plug 'vim-scripts/ReplaceWithRegister'
 
-    " Sort motion
+    "" Sort motion
     Plug 'christoomey/vim-sort-motion'
 
-    " Titlecase
+    "" Titlecase
     Plug 'christoomey/vim-titlecase'
 
+    "" Emmet convention
+    Plug 'mattn/emmet-vim'
 
-    """"""""""""""""""""""
-    "     Navigation     "
-    """"""""""""""""""""""
-    " More target operators
-    " Plug 'wellle/targets.vim'
-    Plug 'wellle/targets.vim', {'on' : []}
-    augroup LoadDuringHold_Targets
-        autocmd!
-        autocmd CursorHold,CursorHoldI * call plug#load('targets.vim') | autocmd! LoadDuringHold_Targets
-    augroup end
+    "" Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-    " Visible marks
+    """""""""""""""""""""""
+    ""     Navigation     "
+    """""""""""""""""""""""
+    "" More target operators
+    Plug 'wellle/targets.vim'
+
+    "" Visible marks
     Plug 'kshenoy/vim-signature'
 
-    " Quicker search (s)
+    "" Quicker search (s)
     Plug 'justinmk/vim-sneak'
 
-    " Better t and f
+    "" Better t and f
     Plug 'unblevable/quick-scope'
 
-    " Focus (like qutebrowser)
-    " Plug 'easymotion/vim-easymotion'
-
-    """"""""""""""""""""""
-    "   File navigation  "
-    """"""""""""""""""""""
-    " File Explorer
-    " Plug 'scrooloose/NERDTree'
-
-    " Ranger FM
-    " Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-
-    " Sayonara (close buffers)
+    """""""""""""""""""""""
+    ""   File navigation  "
+    """""""""""""""""""""""
+    "" Sayonara (close buffers)
     Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 
-    " Startify (project manager vim)
-    " Plug 'mhinz/vim-startify'
-
-    " Fuzzy finder
+    "" Fuzzy finder
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'airblade/vim-rooter'
 
 
-    """"""""""""""""""""""
-    "   Git integration  "
-    """"""""""""""""""""""
-     " Git integration
+    """""""""""""""""""""""
+    ""   Git integration  "
+    """""""""""""""""""""""
+     "" Git integration
     Plug 'mhinz/vim-signify'
 
-    " Git commands from vim (:Git)
-    " Plug 'tpope/vim-fugitive'
+    "" Git commands from vim (:Git)
+    Plug 'tpope/vim-fugitive'
 
-    " Hub commands (:GBrowse :GRemove)
-    " Plug 'tpope/vim-rhubarb'
+    "" Hub commands (:GBrowse :GRemove)
+    "" Plug 'tpope/vim-rhubarb'
 
-    " Browse commits (:GV! :GV? :GV)
-    " Plug 'junegunn/gv.vim'
+    "" Browse commits (:GV! :GV? :GV)
+    "" Plug 'junegunn/gv.vim'
 
 
-    """"""""""""""""""""""
-    "      Objects       "
-    """"""""""""""""""""""
-    " Needed for kana text objects
+    """""""""""""""""""""""
+    ""      Objects       "
+    """""""""""""""""""""""
+    "" Needed for kana text objects
     Plug 'kana/vim-textobj-user'
 
-    " Intend (ai, ii)
+    "" Intend (ai, ii)
     Plug 'michaeljsmith/vim-indent-object'
 
-    " Entire file (ae, ie)
+    "" Entire file (ae, ie)
     Plug 'kana/vim-textobj-entire'
 
-    " Significant line object
+    "" Significant line object
     Plug 'kana/vim-textobj-line'
 
-    " Ruby block (ends with end)
-    " Plug 'nelstrom/vim-textobj-rubyblock'
+    "" Ruby block (ends with end)
+    Plug 'nelstrom/vim-textobj-rubyblock'
 
 
-    """"""""""""""""""""""
-    "   Aesthetics/QOL   "
-    """"""""""""""""""""""
-    " Status bar
-     "Plug 'vim-airline/vim-airline'
-     "Plug 'vim-airline/vim-airline-themes'
+    """""""""""""""""""""""
+    ""   Aesthetics/QOL   "
+    """""""""""""""""""""""
+    "" Status bar
     Plug 'nvim-lualine/lualine.nvim'
-    " If you want to have icons in your statusline choose one of these
-    Plug 'kyazdani42/nvim-web-devicons'
+    "" If you want to have icons in your statusline choose one of these
+    "Plug 'kyazdani42/nvim-web-devicons'
 
-    " Colors
+    "" Colors
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'frazrepo/vim-rainbow'
-    " Plug 'junegunn/rainbow_parentheses.vim'
+    Plug 'p00f/nvim-ts-rainbow'
+    " Plug 'frazrepo/vim-rainbow'
+    "" Plug 'junegunn/rainbow_parentheses.vim'
 
-    " zen mode
+    "" zen mode
     Plug 'junegunn/goyo.vim'
 
-    " Which key
+    "" Which key
     Plug 'liuchengxu/vim-which-key'
 
-    " neovim sudo privileges (:Sudawrite :Sudaread)
+    "" neovim sudo privileges (:Sudawrite :Sudaread)
     Plug 'lambdalisue/suda.vim'
 
-    " Show indent lines
+    "" Show indent lines
     Plug 'Yggdroot/indentLine'
 
-    " Add repeat dot with some plugins
+    "" Add repeat dot with some plugins
     Plug 'tpope/vim-repeat'
 
-    " Startup TB
-    " Plug 'tweekmonster/startuptime.vim'
+    "" Startup TB
+    "" Plug 'tweekmonster/startuptime.vim'
 
     """
     call plug#end()

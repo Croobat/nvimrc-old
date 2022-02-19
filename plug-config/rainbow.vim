@@ -13,5 +13,5 @@ let g:rainbow_load_separately = [
     \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
     \ ]
 
-let g:rainbow_guifgs = ['#50fa7b','#bd93f9','#ff79c6','#8be9fd', '#ff6e67']
+let g:rainbow_guifgs = ['#5af78e','#caa9fa','#ff92d0','#9aedfe', '#f8f8f2']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
