@@ -39,7 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'stevearc/vim-arduino'
 
     "" Real time pages
-    Plug 'turbio/bracey.vim'
+    Plug 'turbio/bracey.vim', {'do': 'npm install --prefix-server'}
 
     """""""""""""""""""""""
     ""    Syntax/typing   "

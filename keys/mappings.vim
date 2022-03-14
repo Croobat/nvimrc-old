@@ -23,7 +23,7 @@ inoremap jk <Esc>
 " Better insert navigation
 inoremap <M-l> <Esc>la
 inoremap <M-h> <Esc>ha
-inoremap <M-k> <Esc>ja
+inoremap <M-j> <Esc>ja
 inoremap <M-k> <Esc>ka
 
 " Fix multiline segments
